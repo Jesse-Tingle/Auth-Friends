@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios';
+import api from '../utils/api';
 
 
 
@@ -22,10 +22,11 @@ export default function Signin(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios.post('http://localhost:5000/api/login', data)
+        api()
+            .post('/api/login', data)
             .then(result => {
-                console.log(result.data)
-                localStorage.setItem('token', result.data.token)
+                console.log('token', result.data)
+                localStorage.setItem('token', result.data.payload)
             })
             .catch(err => {
                 setErr(err.response.data.error)
