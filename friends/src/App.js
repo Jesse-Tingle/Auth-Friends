@@ -7,6 +7,7 @@ import Signin from './components/Signin';
 
 // Browser Router
 import {  Link, Route } from 'react-router-dom';
+import FriendsList from './components/FriendsList';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
 
         </nav>
 
-
+        <FriendsList />
         
         <Route exact path="/signin" component={Signin} />
     </div>
