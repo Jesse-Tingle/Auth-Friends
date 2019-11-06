@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 import api from '../utils/api';
+import '../App.css'; 
+
+// Components 
+import Friend from './Friend';
 
 export default function FriendsList() {
 
@@ -19,11 +23,16 @@ export default function FriendsList() {
             })
     }, [])
 
-
+    if(friends) {
+        console.log('operators lesson', friends)
+    } else {
+        console.log('spinner')
+    }
 
     return (
         <div>
-            {console.log('friends returns', friends)}
+            {friends ? friends.map((item,index) => {
+            return <Friend friend={item} key={index}/>}) : <i className="spinner" /> }
         </div>
     )
 }

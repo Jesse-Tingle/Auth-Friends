@@ -27,6 +27,7 @@ export default function Signin(props) {
             .then(result => {
                 console.log('token', result.data)
                 localStorage.setItem('token', result.data.payload)
+                props.history.push('/friends')
             })
             .catch(err => {
                 setErr(err.response.data.error)
