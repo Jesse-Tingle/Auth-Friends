@@ -1,26 +1,3 @@
-// Displays an individual friend 
-// and styles the friend card
-
-// import React from 'react';
-// import {Card} from 'semantic-ui-react';
-
-
-// export default function Friend(props) {
-//     return (
-//         <div>
-//             <Card> 
-//                 <Card.Content>
-//                 <Card.Header>Name: {props.name}</Card.Header>
-//                 <Card.Description>
-//                     <p>Age: {props.age} </p>
-//                     <p>E-mail: {props.email}</p>
-//                 </Card.Description>
-//                 </Card.Content>
-//             </Card> 
-//         </div>
-//     )
-// }
-
 import React from 'react'
 import {Link} from 'react-router-dom'
 
