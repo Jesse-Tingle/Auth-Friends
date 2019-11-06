@@ -41,7 +41,7 @@ export default function Signin(props) {
 
             <input type="text" name="username" placeholder="username" value={data.username} onChange={handleChange} />
             <input type="text" name="password" placeholder="password" value={data.password} onChange={handleChange} />
-            <button >Sign In</button>
+            <button type="submit">Sign In</button>
         </form>
     )
 }
