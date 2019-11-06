@@ -5,6 +5,7 @@ import '../App.css';
 
 // Components 
 import Friend from './Friend';
+import AddFriendForm from './AddFriendForm';
 
 export default function FriendsList() {
 
