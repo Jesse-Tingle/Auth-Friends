@@ -8,7 +8,7 @@ export default function AddFriendForm(props) {
         email: '',
     })
 
-    const [err, setErr] = useState()
+    const [err, setErr] = useState('')
 
     const handleChange = (e) => {
         setNewFriend({
