@@ -5,7 +5,7 @@ import api from '../utils/api';
 
 export default function Signin(props) {
 
-    const [err, setErr] = useState()
+    const [err, setErr] = useState('')
 
     const [data, setData] = useState({
         username: '',

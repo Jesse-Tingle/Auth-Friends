@@ -7,9 +7,13 @@ import '../App.css';
 import Friend from './Friend';
 import AddFriendForm from './AddFriendForm';
 
+
+// Styled Components
+import styled from 'styled-components';
+
 export default function FriendsList() {
 
-    const [friends, setFriends] = useState()
+    const [friends, setFriends] = useState([])
 
 
     useEffect(() => {
@@ -31,10 +35,20 @@ export default function FriendsList() {
     }
 
     return (
-        <div>
-            {friends ? friends.map((item,index) => {
+        <ContainerDiv>
+            {friends.length ? friends.map((item,index) => {
             return <Friend friend={item} key={index}/>}) : <i className="spinner" /> }
-        </div>
+        </ContainerDiv>
     )
 }
 
+
+
+const ContainerDiv = styled.div`
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+`
